@@ -77,7 +77,7 @@ PRESEED
 install_chef_server() {
   preseed_chef_pkg
 
-  apt-get install -y --force-yes chef chef-server
+  apt-get install -y --force-yes chef chef-server && /etc/init.d/chef-client stop
 }
 
 setup

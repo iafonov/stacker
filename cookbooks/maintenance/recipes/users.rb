@@ -40,6 +40,6 @@ file '/etc/sudoers.d/deploy_chef' do
   mode 0440
   content <<-EOS
     Defaults        env_keep = "SSH_AUTH_SOCK"
-    #{username} ALL= NOPASSWD: /usr/local/bin/chef-client
+    #{username} ALL= NOPASSWD: #{`which chef-client`.chomp}
   EOS
 end

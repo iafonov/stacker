@@ -214,7 +214,7 @@ client_key      'client.pem'                               # your client key
 * Bootstrap the node. Usually it would be a separate server. But in this case we would bootstrap the same physical server.
 
 ```bash
-./bin/knife bootstrap 50.116.44.124 --ssh-user root --ssh-password yourpassword --distro ubuntu12.04-gems -r 'role[copycopter]' --node-name "copycopter"
+./bin/knife bootstrap 50.116.44.124 --ssh-user root --ssh-password yourpassword --distro ubuntu12.04-gems -r 'role[copycopter]' --node-name "copycopter" --sudo
 
 ```
 
